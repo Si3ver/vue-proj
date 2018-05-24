@@ -17,3 +17,5 @@
 1. 添加事件
 2. 点击list - 删除功能
     + 相关知识点 -- 组件间通信基础，订阅发布机制
+
+[vue版](https://si3ver.github.io/vue-proj/learn-vue-cli/todolist/dist/index.html)
