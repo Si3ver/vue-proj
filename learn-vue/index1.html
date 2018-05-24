@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue入门 - v-model双向数据绑定</title>
+    <script src="./vue.js"></script>
+</head>
+<body>
+    <div id="root">
+        姓:<input v-model:value="lastName" />
+        名:<input v-model:value="firstName" />
+        <div>{{fullName}}</div>
+        <div>{{count}}</div>
+    </div>
+
+    <script>
+        new Vue({
+            el: "#root",
+            template: '',
+            data: {
+                firstName: "",
+                lastName: "",
+                count: 0
+            },
+            computed: {
+                fullName: function() {
+                    return this.firstName + " " + this.lastName
+                }
+            },
+            watch: {
+                fullName: function() {
+                    this.count++;
+                }
+            },
+            methods: {
+                handleClick: function() {
+                    this.content = 'world'
+                }
+            }
+        })
+    </script>
+</body>
+</html>
